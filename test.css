@@ -1,0 +1,158 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('reparaciones_background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgba(242, 242, 242, 0.3); /* Fondo semi-transparente */
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    height: 120px; /* Ajustado el tamaño del encabezado */
+    overflow: hidden; /* Evita que el logo se desborde */
+}
+
+/* Título */
+h1 {
+    font-size: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    transform: skew(-5deg);
+    display: inline-block;
+    color: #ff7f00; /* Texto en color naranja */
+    line-height: 120px; /* Centrado vertical del texto */
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.logo img {
+    width: 80px; /* Tamaño del logo ajustado */
+    height: auto;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    padding-bottom: 60px;
+    max-width: 600px; /* Ancho máximo de la tabla */
+    margin: 0 auto; /* Centrado horizontal de la tabla */
+    overflow-y: auto; /* Agregado desplazamiento vertical */
+}
+
+/* Contenedor de botones */
+.button-container {
+    text-align: center;
+}
+
+/* Estilos para los botones */
+.button {
+    display: inline-block;
+    padding: 6px 12px; /* Reducido el espacio interno */
+    margin: 10px; /* Modificado para que tenga un margen uniforme */
+    background-color: #808080; /* Cambiado a gris */
+    color: #ffffff; /* Texto en color blanco */
+    text-decoration: none;
+    border-radius: 20px; /* Hacer los bordes más redondeados */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    min-width: 120px; /* Ancho mínimo para el botón */
+    text-align: center; /* Centrar el texto dentro del botón */
+}
+
+.button:hover {
+    background-color: #4e4a47;
+    border-color: #b5aeae;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1; /* Asegura que el footer esté encima de otros elementos */
+    margin-top: 20px; /* Agrega margen arriba */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%; /* Ancho de la tabla */
+    height: 50%; /* Altura de la tabla */
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto; /* Margen automático a la izquierda */
+    margin-right: auto; /* Margen automático a la derecha */
+    border: 4px solid #ccc; /* Borde gris de 4px */
+
+}
+
+th, td {
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #fff; /* Texto en color blanco */
+    background-color: #ff7f00; /* Fondo en color naranja */
+    padding: 2px; /* Espaciado interno */
+}
+
+th {
+    background-color: #333; /* Cabecera de la tabla en color gris oscuro */
+}
+
+/* Estilos para los botones de acciones */
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions form,
+.actions button {
+    margin-right: 10px;
+}
+
+.actions button:hover {
+    background-color: #ff7f00;
+}
+
+/* Estilos responsivos para tabletas y móviles */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .logo img {
+        width: 80px;
+    }
+    main {
+        padding: 10px;
+    }
+    .button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .pagination-container {
+        bottom: 40px;
+    }
+}

@@ -1,0 +1,91 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Fondo de reserva en caso de que la textura no se cargue */
+    background-image:url('reparaciones_background.jpg'); /* URL de la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen de fondo al tamaño de la ventana del navegador */
+    background-repeat: repeat; /* Repetir el patrón de la textura */
+    min-height: 100vh; /* Establecer el alto mínimo del cuerpo al 100% de la altura de la ventana del navegador */
+    position: relative; /* Establecer posición relativa para el contenido */
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 200px;
+    text-align: center;
+    position: relative; /* Para posicionar el logo */
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 240px;
+    margin: 40px 0 0 0;
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra de texto */
+    transform: skew(-5deg); /* Inclinación del texto */
+    display: inline-block; /* Alinear el texto junto al logo */
+  }
+  
+  /* Logo */
+  .logo {
+    position: absolute;
+    top: 10px; /* Espacio desde arriba */
+    left: 20px; /* Espacio desde la izquierda */
+  
+  }
+  
+  .logo img {
+    width: 1000px; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+  
+  /* Main */
+  main {
+    padding: 20px;
+    padding-bottom: 60px; /* Ajustar el espacio para el footer */
+  }
+  
+  /* Contenedor de botones */
+  .button-container {
+    text-align: center;
+  }
+  
+  /* Estilos para los botones */
+  .button {
+    display: inline-block;
+    padding: 20px 30px;
+    margin: 10px;
+    width: 300px; /* Ancho fijo */
+    height: 60px; /* Alto fijo */
+    background-color: #ff7f00; /* Naranja */
+    color: #fff; /* Blanco */
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 20px; /* Tamaño de fuente */
+    text-align: center; /* Centrado horizontal */
+    line-height: 60px; /* Centrado vertical */
+  }
+  
+  .button:hover {
+    background-color: #4e4a47; /* Naranja más oscuro al pasar el ratón */
+    border-color: #b5aeae; /* Borde naranja */
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Fijar el pie de página */
+    bottom: 0; /* Establecer la posición en la parte inferior */
+    width: 100%; /* Establecer el ancho al 100% del cuerpo */
+  }
+
+

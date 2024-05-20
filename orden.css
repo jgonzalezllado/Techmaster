@@ -1,0 +1,174 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('reparaciones_background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgba(242, 242, 242, 0.3); /* Fondo semi-transparente */
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 2vw; /* Ajuste dinámico del relleno */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+/* Título */
+h1 {
+    font-size: 1vw; /* Tamaño de fuente ajustado */
+    margin: 3vw 0 1vw; /* Ajuste dinámico del margen: superior - 3vw, inferior - 1vw */
+    text-transform: uppercase;
+    text-shadow: 1vw 1vw 2vw rgba(0,0,0,0.3); /* Ajuste dinámico de la sombra */
+    transform: skew(-5deg);
+    display: inline-block;
+    color: #b67839; /* Texto en color naranja */
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 1vw; /* Ajuste dinámico del margen superior */
+    left: 1vw; /* Ajuste dinámico del margen izquierdo */
+    max-width: 8vw; /* Ancho máximo del logo */
+    max-height: 8vw; /* Altura máxima del logo */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Main */
+main {
+    padding: 2vw; /* Ajuste dinámico del relleno */
+    padding-bottom: 6vw; /* Ajuste dinámico del relleno inferior */
+}
+
+/* Contenedor de botones */
+.button-container {
+    text-align: center;
+}
+
+/* Estilos para los botones */
+
+.button,
+input[type="submit"] {
+    display: inline-block;
+    padding: 0.5vw 1vw; /* Relleno ajustado */
+    margin: 0.5vw; /* Ajuste dinámico del margen */
+    background-color: #808080; /* Color gris */
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none;
+    
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1vw; /* Tamaño de fuente ajustado */
+    min-width: auto; /* Eliminar el ancho mínimo */
+    text-align: center; /* Alinear texto al centro */
+}
+
+.button:hover,
+input[type="submit"]:hover {
+    background-color: #4e4a47;
+    border-color: #b5aeae;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1vw;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1; /* Asegura que el footer esté encima de otros elementos */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2vw; /* Ajuste dinámico del margen */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 1vw; /* Ajuste dinámico del relleno */
+    text-align: center;
+    color: #fff; /* Texto en color blanco */
+    background-color: #ff7f00; /* Fondo en color naranja */
+}
+
+th {
+    background-color: #333; /* Cabecera de la tabla en color gris oscuro */
+}
+
+/* Estilos para los botones de acciones */
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions form,
+.actions button {
+    margin-right: 1vw; /* Ajuste dinámico del margen */
+}
+
+.actions button:hover {
+    background-color: #ff7f00;
+}
+
+/* Estilos para los input de estado y trabajador */
+input[name="nuevo_estado"],
+select[name="nuevo_trabajador"] {
+    padding: 0.5vw; /* Ajuste dinámico del relleno */
+    margin-right: 1vw; /* Añadir un poco de espacio entre los input */
+    border-radius: 0.5vw; /* Bordes redondeados */
+    border: 1px solid #ccc;
+}
+
+/* Ajustar el ancho de las columnas de la tabla */
+th:nth-child(5), /* Columna de estado */
+td:nth-child(5), /* Columna de estado */
+th:nth-child(6), /* Columna de trabajador asignado */
+td:nth-child(6) { /* Columna de trabajador asignado */
+    width: auto; /* Ajustar al contenido */
+}
+
+/* Estilos responsivos para tabletas y móviles */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 4vw; /* Ajuste dinámico del relleno */
+    }
+    h1 {
+        font-size: 4vw; /* Tamaño de fuente ajustado */
+        margin-top: 2vw; /* Ajuste dinámico del margen superior */
+    }
+    .logo {
+        top: 2vw; /* Ajuste dinámico del margen superior */
+        left: 2vw; /* Ajuste dinámico del margen izquierdo */
+        max-width: 15vw; /* Ancho máximo del logo */
+        max-height: 15vw; /* Altura máxima del logo */
+    }
+
+    main {
+        padding: 4vw; /* Ajuste dinámico del relleno */
+        padding-bottom: 12vw; /* Ajuste dinámico del relleno inferior */
+    }
+
+    .button,
+    input[type="submit"] {
+        padding: 1vw 2vw; /* Relleno ajustado */
+        font-size: 2vw; /* Tamaño de fuente ajustado */
+    }
+}
