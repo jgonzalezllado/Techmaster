@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dni_cliente = $_POST['dni_cliente'];
 
     // Consulta SQL para obtener el ID del cliente usando el DNI
-    $sql_get_cliente_id = "SELECT id FROM Clientes WHERE dni = '$dni_cliente'";
+    $sql_get_cliente_id = "SELECT id FROM clientes WHERE dni = '$dni_cliente'";
     $result_get_cliente_id = $conn->query($sql_get_cliente_id);
 
     // Verifica si se encontró el cliente
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Realiza la inserción del ticket
         if ($conn->query($sql_insert_ticket) === TRUE) {
             // Incrementa el contador de tickets para el cliente
-            $sql_update_cliente = "UPDATE Clientes SET num_tickets = num_tickets + 1 WHERE id = '$cliente_id'";
+            $sql_update_cliente = "UPDATE clientes SET num_tickets = num_tickets + 1 WHERE id = '$cliente_id'";
             $conn->query($sql_update_cliente);
             echo "Ticket creado correctamente";
         } else {
@@ -61,7 +61,7 @@ $conn->close();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taller de Reparaciones</title>
-  <link rel="stylesheet" href="style_ticket.css">
+  <link rel="stylesheet" href="ticketstyle.css">
 </head>
 <body>
   <header>
@@ -71,19 +71,15 @@ $conn->close();
     <h2>Crear Ticket</h2>
   </header>
 
-  <main>
-    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+  <form class="container" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
       <label for="dni_cliente">DNI del cliente:</label>
-      <input type="text" name="dni_cliente" id="dni_cliente" required><br>
-      
+      <input type="text" name="dni_cliente" id="dni_cliente" class="input-field" required><br>
       <label for="modelo_reparar">Modelo a reparar:</label>
-      <input type="text" name="modelo_reparar" id="modelo_reparar" required><br>
-      
+      <input type="text" name="modelo_reparar" id="modelo_reparar" class="input-field" required><br>
       <label for="comentarios">Comentarios:</label>
-      <input type="text" name="comentarios" id="comentarios" required><br>
-      
+      <input type="text" name="comentarios" id="comentarios" class="input-field" required><br>
       <label for="trabajador_id">Asignar a trabajador:</label>
-      <select name="trabajador_id" id="trabajador_id">
+      <select name="trabajador_id" id="trabajador_id" class="input-field">
           <?php
           // Genera las opciones del desplegable con los trabajadores
           if ($result_trabajadores->num_rows > 0) {
@@ -93,26 +89,22 @@ $conn->close();
           }
           ?>
       </select><br>
-      
       <label for="estado">Estado:</label>
-      <select name="estado" id="estado">
+      <select name="estado" id="estado" class="input-field">
           <option value="recibido">Recibido</option>
           <option value="asignado">Asignado a técnico</option>
           <option value="finalizado">Finalizado</option>
       </select><br>
-      
       <label for="fecha">Fecha:</label>
-      <input type="date" name="fecha" id="fecha" required><br>
-      
+      <input type="date" name="fecha" id="fecha" class="input-field" required><br>
       <div class="button-container">
-        <button type="button" class="button" onclick="window.location.href = 'inicio.html';">Inicio</button>
-        <input type="submit" value="Crear Ticket" class="button">
+          <button type="button" class="button button-home" onclick="window.location.href = 'inicio.html';">Inicio</button>
+          <input type="submit" value="Crear Ticket" class="button">
       </div>
-    </form>
-  </main>
-  
+  </form>
   <footer>
     <p>© 2024 Techmaster</p>
   </footer>
 </body>
 </html>
+

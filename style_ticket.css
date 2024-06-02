@@ -15,7 +15,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     position: relative;
 }
@@ -28,7 +28,7 @@ h2 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     transform: skew(-5deg);
     display: inline-block;
-    color: #656565; /* Texto en color naranja */
+    color: #ff7f00; /* Texto en color naranja */
 }
 
 /* Logo */
@@ -114,7 +114,6 @@ input[type="submit"]:hover {
 /* Estilo para el botón de la izquierda */
 .button-left {
     float: right; /* Alineación a la derecha */
-    margin-right: 10px;
 }
 
 /* Estilo para el botón de la derecha */

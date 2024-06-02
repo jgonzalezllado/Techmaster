@@ -1,0 +1,110 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('reparaciones_background.jpg');
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo con 30% de opacidad */
+    color: #333;
+    min-height: 100vh; /* Para ajustar el tamaño del contenido */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #343a40;
+    color: #ff9100;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Ajustar el ancho del header al 100% */
+    overflow: hidden; /* Evitar que el header se "parta" en dispositivos móviles */
+}
+
+header .logo img {
+    height: 30px; /* Reducir el tamaño del logo para dispositivos móviles */
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Reducir el tamaño del texto para dispositivos móviles */
+}
+
+/* Estilos para el contenido principal */
+.container {
+    max-width: 400px; /* Reducir el ancho del formulario en dispositivos móviles */
+    width: 90%; /* Ajustado para que sea responsive */
+    margin: auto; /* Centro el formulario */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo con 30% de opacidad */
+    border-radius: 10px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos del formulario */
+}
+
+.container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #474545; /* Cambia el color del texto de las etiquetas a gris */
+}
+
+.container input[type="text"],
+.container input[type="date"],
+.container select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Ajusto el ancho del input */
+    color: #888; /* Cambio el color del texto de los inputs a gris */
+}
+
+/* Estilos para el botón de crear ticket */
+.container .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container .button-home,
+.container .button {
+    padding: 10px 20px;
+    background-color: #314e64;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px; /* Separación entre botones */
+    width: 150px; /* Tamaño fijo para los botones */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Para que el footer quede abajo */
+    width: 100%; /* Ajustar el ancho del footer al 100% */
+    overflow: hidden; /* Evitar que el footer se "parta" en dispositivos móviles */
+}
+
+/* Consulta de medios para dispositivos con pantalla de hasta 768px de ancho */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Ajusta el ancho del contenedor para pantallas pequeñas */
+    }
+}
+
+/* Consulta de medios para dispositivos con pantalla de hasta 480px de ancho */
+@media only screen and (max-width: 480px) {
+    .container {
+        max-width: 300px; /* Reducir aún más el ancho del formulario en pantallas extra pequeñas */
+    }
+}

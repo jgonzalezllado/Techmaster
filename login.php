@@ -17,21 +17,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $user = $_POST['username'];
   $pass = $_POST['password'];
 
-  // Consulta para verificar usuario y contraseña
-  $sql = "SELECT trabajador_id FROM trabajadores WHERE dni = ? AND password = ?";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("ss", $user, $pass);
-  $stmt->execute();
-  $stmt->store_result();
+  // Verificar si es un trabajador
+  $sql_trabajador = "SELECT trabajador_id FROM trabajadores WHERE dni = ? AND password = ?";
+  $stmt_trabajador = $conn->prepare($sql_trabajador);
+  $stmt_trabajador->bind_param("ss", $user, $pass);
+  $stmt_trabajador->execute();
+  $stmt_trabajador->store_result();
 
-  if ($stmt->num_rows > 0) {
+  if ($stmt_trabajador->num_rows > 0) {
     $_SESSION['username'] = $user;
+    $stmt_trabajador->close();
     header("Location: inicio.html");
   } else {
-    echo "Usuario o contraseña incorrectos";
+    // Verificar si es un administrador
+    $sql_admin = "SELECT administrador_id FROM administradores WHERE dni = ? AND password = ?";
+    $stmt_admin = $conn->prepare($sql_admin);
+    $stmt_admin->bind_param("ss", $user, $pass);
+    $stmt_admin->execute();
+    $stmt_admin->store_result();
+
+    if ($stmt_admin->num_rows > 0) {
+      $_SESSION['username'] = $user;
+      $stmt_admin->close();
+      header("Location: inicio2.html");
+    } else {
+      echo "Usuario o contraseña incorrectos";
+    }
+
+    $stmt_admin->close();
   }
 
-  $stmt->close();
+  $stmt_trabajador->close();
 }
 
 $conn->close();

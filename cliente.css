@@ -1,0 +1,122 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('reparaciones_background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+h2 {
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: #656565;
+}
+
+/* Main container */
+/* Main container */
+main.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    height: calc(100vh - 100px); /* Ajusta según la altura de tu header y footer */
+    overflow-y: auto;
+}
+
+
+form {
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+input[type="submit"],
+.button-home {
+    display: inline-block;
+    width: 140px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover,
+.button-home:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active,
+.button-home:active {
+    background-color: #555;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    flex-shrink: 0;
+}
+
+/* Message */
+.message-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}

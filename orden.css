@@ -22,7 +22,7 @@ header {
 }
 
 /* Título */
-h1 {
+h2 {
     font-size: 1vw; /* Tamaño de fuente ajustado */
     margin: 3vw 0 1vw; /* Ajuste dinámico del margen: superior - 3vw, inferior - 1vw */
     text-transform: uppercase;
@@ -58,20 +58,18 @@ main {
 }
 
 /* Estilos para los botones */
-
 .button,
 input[type="submit"] {
     display: inline-block;
-    padding: 0.5vw 1vw; /* Relleno ajustado */
-    margin: 0.5vw; /* Ajuste dinámico del margen */
+    padding: 0.3vw 0.6vw; /* Relleno ajustado */
+    margin: 0.3vw; /* Ajuste dinámico del margen */
     background-color: #808080; /* Color gris */
     color: #ffffff; /* Texto blanco */
     text-decoration: none;
-    
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1vw; /* Tamaño de fuente ajustado */
+    font-size: 0.7vw; /* Tamaño de fuente ajustado */
     min-width: auto; /* Eliminar el ancho mínimo */
     text-align: center; /* Alinear texto al centro */
 }
@@ -103,7 +101,7 @@ table {
 
 th, td {
     border: 1px solid #ccc;
-    padding: 1vw; /* Ajuste dinámico del relleno */
+    padding: 0.5vw; /* Ajuste dinámico del relleno */
     text-align: center;
     color: #fff; /* Texto en color blanco */
     background-color: #ff7f00; /* Fondo en color naranja */
@@ -131,9 +129,9 @@ th {
 /* Estilos para los input de estado y trabajador */
 input[name="nuevo_estado"],
 select[name="nuevo_trabajador"] {
-    padding: 0.5vw; /* Ajuste dinámico del relleno */
-    margin-right: 1vw; /* Añadir un poco de espacio entre los input */
-    border-radius: 0.5vw; /* Bordes redondeados */
+    padding: 0.2vw; /* Ajuste dinámico del relleno */
+    margin-right: 0.5vw; /* Añadir un poco de espacio entre los input */
+    border-radius: 0.3vw; /* Bordes redondeados */
     border: 1px solid #ccc;
 }
 
@@ -150,7 +148,7 @@ td:nth-child(6) { /* Columna de trabajador asignado */
     header {
         padding: 4vw; /* Ajuste dinámico del relleno */
     }
-    h1 {
+    h2 {
         font-size: 4vw; /* Tamaño de fuente ajustado */
         margin-top: 2vw; /* Ajuste dinámico del margen superior */
     }

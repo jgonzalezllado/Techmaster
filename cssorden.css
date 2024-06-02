@@ -3,12 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f2f2f2;
     background-image: url('reparaciones_background.jpg');
     background-size: cover;
     background-repeat: repeat;
     min-height: 100vh;
     position: relative;
-    background-color: rgba(242, 242, 242, 0.3); /* Fondo semi-transparente */
 }
 
 /* Encabezado */
@@ -21,32 +21,40 @@ header {
 }
 
 /* Título */
-h1 {
+h2 {
     font-size: 24px;
-    margin: 40px 0 0 0;
+    margin: 20px 0;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     transform: skew(-5deg);
     display: inline-block;
-    color: #ff7f00; /* Texto en color naranja */
+    color: #ff7f00;
 }
 
 /* Logo */
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-}
-
 .logo img {
     width: 100px;
     height: auto;
 }
 
+/* Logo */
+.logo {
+    position: absolute;
+    top: 10px; /* Margen superior */
+    left: 10px; /* Margen izquierdo */
+    max-width: 80px; /* Ancho máximo del logo */
+    max-height: 80px; /* Altura máxima del logo */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
 /* Main */
 main {
-    padding: 20px;
-    padding-bottom: 60px;
+    padding: 20px; /* Ajuste del relleno */
+    padding-bottom: 60px; /* Ajuste del relleno inferior */
 }
 
 /* Contenedor de botones */
@@ -58,48 +66,49 @@ main {
 .button,
 input[type="submit"] {
     display: inline-block;
-    padding: 5px 10px; /* Relleno reducido */
-    margin: 5px; /* Ajustar margen */
-    background-color: #808080; /* Color gris */
-    color: #fff; /* Texto blanco */
+    padding: 10px 20px; /* Relleno */
+    margin: 10px; /* Margen */
+    background-color: #808080; /* Color de fondo gris */
+    color: #ffffff; /* Texto en color blanco */
     text-decoration: none;
-    border-radius: 10px; /* Bordes redondeados */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 14px; /* Tamaño de fuente */
-    min-width: auto; /* Eliminar el ancho mínimo */
-    text-align: center; /* Alinear texto al centro */
+    text-align: center;
 }
 
 .button:hover,
 input[type="submit"]:hover {
     background-color: #4e4a47;
-    border-color: #b5aeae;
 }
 
+/* Pie de página */
 /* Pie de página */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 20px; /* Ajuste del relleno */
     position: fixed;
     bottom: 0;
     width: 100%;
+    left: 0; /* Ajuste para asegurarse de que el footer comience desde el borde izquierdo */
     z-index: 1; /* Asegura que el footer esté encima de otros elementos */
 }
+
+
 
 /* Estilos para la tabla */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 20px; /* Margen superior */
 }
 
 th, td {
     border: 1px solid #ccc;
-    padding: 8px;
+    padding: 5px; /* Relleno */
     text-align: center;
     color: #fff; /* Texto en color blanco */
     background-color: #ff7f00; /* Fondo en color naranja */
@@ -117,7 +126,7 @@ th {
 
 .actions form,
 .actions button {
-    margin-right: 10px;
+    margin-right: 10px; /* Margen derecho */
 }
 
 .actions button:hover {
@@ -127,9 +136,9 @@ th {
 /* Estilos para los input de estado y trabajador */
 input[name="nuevo_estado"],
 select[name="nuevo_trabajador"] {
-    padding: 5px;
-    margin-right: 10px; /* Añadir un poco de espacio entre los input */
-    border-radius: 5px;
+    padding: 5px; /* Relleno */
+    margin-right: 5px; /* Margen derecho */
+    border-radius: 3px; /* Bordes redondeados */
     border: 1px solid #ccc;
 }
 
@@ -144,24 +153,27 @@ td:nth-child(6) { /* Columna de trabajador asignado */
 /* Estilos responsivos para tabletas y móviles */
 @media only screen and (max-width: 768px) {
     header {
-        padding: 10px;
+        padding: 40px; /* Ajuste del relleno */
     }
-    h1 {
-        font-size: 20px;
+    h2 {
+        font-size: 4vw; /* Tamaño de fuente ajustado */
+        margin-top: 2vw; /* Margen superior */
     }
-    .logo img {
-        width: 80px;
+    .logo {
+        top: 4vw; /* Margen superior */
+        left: 4vw; /* Margen izquierdo */
+        max-width: 15vw; /* Ancho máximo del logo */
+        max-height: 15vw; /* Altura máxima del logo */
     }
+
     main {
-        padding: 10px;
+        padding: 4vw; /* Ajuste del relleno */
+        padding-bottom: 12vw; /* Ajuste del relleno inferior */
     }
+
     .button,
     input[type="submit"] {
-        padding: 3px 8px; /* Relleno reducido */
-        font-size: 12px; /* Tamaño de fuente */
-    }
-    .pagination-container {
-        bottom: 40px;
+        padding: 2vw 4vw; /* Relleno */
+        font-size: 2vw; /* Tamaño de fuente ajustado */
     }
 }
-

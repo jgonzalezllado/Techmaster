@@ -1,0 +1,120 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('reparaciones_background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; /* Evitar el scroll */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5em; /* Reducir tamaño de letra */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 70px; /* Espacio para el header */
+    padding-bottom: 50px; /* Espacio para el footer */
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100vh - 120px); /* Altura total menos header y footer */
+    overflow-y: auto; /* Permitir scroll en el contenido del main */
+}
+
+form {
+    margin-top: 40px;
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 10px; /* Reducir tamaño de letra */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px; /* Reducir padding */
+    margin-bottom: 15px; /* Reducir margen */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.9em; /* Reducir tamaño de letra */
+    color: #333;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px; /* Reducir padding */
+    background-color: #ff7f50; /* Naranja coral */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em; /* Reducir tamaño de letra */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e5673e; /* Tonalidad más oscura de naranja */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+    }
+}
